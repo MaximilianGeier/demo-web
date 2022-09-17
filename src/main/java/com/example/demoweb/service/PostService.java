@@ -11,17 +11,13 @@ import java.util.List;
 public class PostService {
     List<Post> posts = new ArrayList<>();
 
-    public void add(String text){
-        this.posts.add(new Post(text));
-    }
     public List<Post> listAllPosts(){
         if (posts.size() >= 3){
             return posts.subList(0, 2);
         }
         else{
-            List<Post> result = Arrays.asList(new Post("no posts"), new Post("еще no posts"),
-                                              new Post("и еще no posts"));
-            return result;
+            return Arrays.asList(new Post("no posts"), new Post("еще no posts"),
+                    new Post("и еще no posts"));
         }
     }
 }
