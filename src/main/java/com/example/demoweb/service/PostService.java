@@ -9,17 +9,17 @@ import java.util.List;
 
 @Service
 public class PostService {
-    static List<Post> posts = new ArrayList<>();
+    List<Post> posts = new ArrayList<>();
 
     public void create(String text) {
-        posts.add(new Post(text, new Date()));
+        posts.add(new Post((long) posts.size(), text, new Date()));
     }
     public List<Post> listAllPosts(){
         if (posts.size() > 0){
             return posts;
         }
         else{
-            return List.of(new Post("no posts"));
+            return List.of(new Post(0L, "no posts", new Date()));
         }
     }
 }

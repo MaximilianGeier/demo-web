@@ -15,7 +15,7 @@ import java.util.Map;
 @Controller
 public class PostsViewController {
     @Autowired
-    PostService postsService = new PostService();
+    PostService postsService;
 
 
     @RequestMapping(path = "/", method = RequestMethod.GET)

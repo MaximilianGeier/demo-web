@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class PostsCreateController {
     @Autowired
-    PostService postsService = new PostService();
+    PostService postsService;
 
     @RequestMapping(path = "/new", method = RequestMethod.GET)
     public String create(Model model) {
