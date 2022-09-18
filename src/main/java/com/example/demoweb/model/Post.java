@@ -25,4 +25,10 @@ public class Post {
         this.likes = 0;
         this.creationDate = new Date();
     }
+
+    public Post(String text, Date creationDate){
+        this.text = text;
+        this.likes = 0;
+        this.creationDate = creationDate;
+    }
 }
